@@ -1,0 +1,516 @@
+@font-face {
+  font-family: 'Nelphim';
+  src: url('/fonts/NelphimItalic-Italic.woff2') format('woff2'), url('../fonts/NelphimItalic-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nelphim';
+  src: url('/fonts/Nelphim-Regular.woff2') format('woff2'), url('../fonts/Nelphim-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html::before {
+  content: '';
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  pointer-events: none;
+  border: 16px solid;
+  border-image: linear-gradient(to bottom, transparent 30%, #ecd1c6, #ccf6d2);
+  border-image-slice: 1;
+}
+
+/*
+:root {
+  --light-brown: #86746c;
+}
+
+::selection {
+  background: #fddfe2;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 20px;
+  background: var(--light-brown);
+  border-radius: 2px;
+}
+
+::selection {
+  background: pink;
+}
+
+::-moz-selection {
+  background: pink;
+}*/
+
+
+body, html {
+  height: 100%;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  cursor: url(../assets/dot.png), auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+    line-height: 1.1em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  cursor: url(../assets/dot.png), auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  order: 0;
+}
+
+.image {
+  background-image: url("../assets/cloud-bg.png");
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+
+h1 {
+  mix-blend-mode: overlay;
+  font-size: calc(80px);
+  background-color: transparent;
+  filter: invert(100%);
+  color: purple;
+  opacity: .8;
+  perspective: 500px;
+}
+
+h1, p {
+  font-family: 'Nelphim';
+  position: relative;
+}
+
+
+.main {
+  display: block;
+  padding-top: 10%;
+  padding-bottom: 3.2%;
+}
+
+section>div {
+  cursor: inherit;
+}
+
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.section {
+  float: left;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section:first-child {
+  background-color: lightblue;
+}
+
+.section:nth-child(2) {
+  background-color: lightyellow;
+}
+
+.section:nth-child(3) {
+  background-color: lightpink;
+}
+
+.section:nth-child(4) {
+  background-color: lightgreen;
+}
+
+.section:nth-child(5) {
+  background-color: lightgrey;
+}
+
+.sections {
+ 
+  min-width: 100vw;
+  height: 100vh;
+}
+
+.section__title, .section__heading {
+  width: 100%;
+}
+.card-container{
+  max-width:50%;
+}
+.card-section {
+
+  background: #c7d3df;
+  min-height:100vh;
+
+  
+}
+
+.card-section>h2 {
+  padding-top: 10%;
+  padding-bottom: 3.2%;
+  font-size: 2.6em;
+}
+
+.card-container, .projects-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card {
+  display: flex;
+  width: 20%;
+  border-radius: 18px;
+  /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.12);*/
+  text-align: center;
+  cursor: pointer;
+  margin: 35px;
+  transform-style: preserve-3d;
+  border: double 1em transparent;
+  border-width: 7px;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(to bottom, peachpuff 5%, #c7d3df);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding-bottom: 3%;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+  transform: translateZ(30px);
+  text-align: left;
+}
+
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size: 13px;
+}
+
+.card-text p {
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.js-tilt-glare {
+  border-radius: 18px;
+}
+
+.projects-section {
+  background-color: #c7d3df;
+}
+
+.projects-inner {
+  max-width: 1700px;
+}
+
+.projects-inner>img {
+  max-height: 355px;
+  min-height: 200px;
+  border-radius: 18px;
+}
+
+@media (min-width: 1281px) {
+  .section-inner {
+    width: 50%;
+  }
+
+  .projects-section {
+    padding: 10% 20% 15%;
+  }
+}
+
+/*
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+*/
+.intro {
+  font-size: 3vw;
+  color: #3b444b;
+  margin-top: 20px;
+  line-height: 1.25;
+}
+
+
+.headline {
+  align-items: center;
+  background-color: var(--color);
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  perspective: 1000px;
+  scroll-snap-align: start;
+  letter-spacing: 4px;
+  word-spacing: 30px;
+  /*  font-size: calc(1rem + 15vmin);
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  scroll-snap-align: start;
+  width: 100vw;*/
+}
+
+.whitespace {
+  margin-right: 20px;
+}
+
+/*(.headline:nth-child(1) {
+  --color: #f9ca24;
+}
+.headline:nth-child(2) {
+  --color: #3498db;
+}
+.headline:nth-child(3) {
+  --color: #ff7979;
+}
+.headline:nth-child(4) {
+  --color: #1abc9c;
+}
+.headline:nth-child(5) {
+  --color: #e74c3c;
+}
+.headline:nth-child(6) {
+  --color: #f8c291;
+}*/
+
+.word,
+.char {
+  -webkit-animation-delay: var(--del);
+  animation-delay: var(--del);
+  -webkit-animation-direction: var(--dir, normal);
+  animation-direction: var(--dir, normal);
+  -webkit-animation-duration: var(--dur);
+  animation-duration: var(--dur);
+  -webkit-animation-iteration-count: var(--it, infinite);
+  animation-iteration-count: var(--it, infinite);
+  -webkit-animation-name: var(--name);
+  animation-name: var(--name);
+  -webkit-animation-timing-function: var(--tf);
+  animation-timing-function: var(--tf);
+  -webkit-animation-fill-mode: var(--fill, forwards);
+  animation-fill-mode: var(--fill, forwards);
+  display: inline-block;
+  position: relative;
+  transform-origin: 50% 100%;
+  z-index: 1;
+}
+
+.headline--float .char {
+  --name: float;
+  --dur: 2200ms;
+  --del: calc(var(--char-index) * -0.5s);
+  --tf: ease-in-out;
+  --dir: alternate;
+}
+
+.headline--float .char:nth-child(2n) {
+  --name: float-alt;
+}
+
+@-webkit-keyframes float {
+  from {
+    transform: translate(2%, -10%) rotate(-1deg);
+  }
+
+  to {
+    transform: translate(-2%, 5%) rotate(3deg);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translate(2%, -10%) rotate(-1deg);
+  }
+
+  to {
+    transform: translate(-2%, 5%) rotate(3deg);
+  }
+}
+
+@-webkit-keyframes float-alt {
+  from {
+    transform: translate(0%, -5%) rotate(-1deg);
+  }
+
+  to {
+    transform: translate(2%, 10%) rotate(3deg);
+  }
+}
+
+@keyframes float-alt {
+  from {
+    transform: translate(0%, -5%) rotate(-1deg);
+  }
+
+  to {
+    transform: translate(2%, 10%) rotate(3deg);
+  }
+}
+
+@media (min-width: 1281px) {
+  .main-inner {
+    max-width: 75%;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  /* CSS */
+  .main-inner {
+    max-width: 75%;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* CSS */
+  .main-inner {
+    max-width: 86%;
+  }
+
+  p {
+    font-size: 32px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 567px) and (max-width: 767px) {
+  .main-inner {
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 567px) {
+  .main-inner {
+    max-width: 97%;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  p {
+    font-size: 27px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-inner {
+    max-width: auto;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .intro {
+    font-size: 6vw;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+.card-section{
+  flex-direction:column;
+}
+}
