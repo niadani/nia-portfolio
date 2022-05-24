@@ -1,4 +1,72 @@
- <script>
+<!DOCTYPE html>
+<html lang="en" style="--timing:0.5s; --easing:ease; --scales:0;">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./css/stylesheet.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src=" https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable-latest-beta.js">
+
+    </script>
+</head>
+
+<body>
+
+  
+  <div class="main-wrapper" data-js="main-wrapper">
+    <div class="sections" data-js="sections-wrapper">
+      <section class="section" data-js="section">
+        <div class="image"></div>
+        <div class="main">
+          <h1 data-splitting class="headline headline--float">Hi, I'm Nia.</h1>
+          <p class="intro">I love cats and drawing.
+           </p>
+
+           
+            <div id="container">
+              <div class="btn" id="btn-1"><span>Blur on hover</span></div>
+          </section>
+
+ 
+    <section class="section" data-js="section">
+      <div class="section-inner">
+          <h2>BLA</h2>
+         
+         
+        </div>
+     </section>
+
+    <section class="section" data-js="section">
+      <h1 class="section__title">5</h1></section>
+      
+    <section class="section card-section" data-js="section">
+     
+        
+     </section>
+  </div>
+  </div>
+
+
+
+
+
+
+  <script>
+    Splitting();
+  </script>
+
+
+  <script>
   $(document).ready(function () {
       $('.image').ripples('show');
     });
@@ -120,3 +188,18 @@ setWidth();
 
 
 </script>
+
+
+
+
+<script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      glare: true,
+      reverse: true,
+      "max-glare": 0.1,
+    });
+  </script>
+
+</body>
+
+</html>
