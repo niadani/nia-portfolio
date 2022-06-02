@@ -747,8 +747,8 @@ margin:auto auto;
   .section:nth-child(4) {
     background-color: #fdf4e5;
     background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
-    width: 95vw;
+    width: 100vw;
   }
 
 
-}}
+}
