@@ -143,10 +143,11 @@ h4{
   opacity: .8;
   perspective: 500px;
 }
-h1, p {
+h1, p, .contact {
   font-family: 'Nelphim';
   position: relative;
 }
+
 
 h4 {
   font-size: 44px;
