@@ -143,7 +143,7 @@ h4{
   opacity: .8;
   perspective: 500px;
 }
-h1, p, .logo {
+h1, p {
   font-family: 'Nelphim';
   position: relative;
 }
@@ -195,13 +195,13 @@ section>div {
 .section:nth-child(4) {
   background-color: #fdf4e5;
   background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
-  max-width: 40vw;
+  width: 50vw;
 }
 
 
 .section:nth-child(5) {
   background-color: lightgrey;
-  width: 100vw;
+ 
 }
 
 .section-inner {
@@ -226,7 +226,7 @@ margin:auto auto;
 
 }
 .contact-inner{
-  padding: 0 8%;
+  padding: 0 0%;
 }
 .lwd {
   font-size: 20px;
@@ -713,7 +713,7 @@ margin:auto auto;
   .section:nth-child(4) {
     background-color: #fdf4e5;
     background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
-    width: 105vw;
+    width: 155vw;
   }
    .btn2 {
     width: 100px;
@@ -749,7 +749,7 @@ margin:auto auto;
   }
 
   .section:nth-child(4) {
-    width: 95vw!important;
+    width: 85vw!important;
   }
 
   .btn2 {
