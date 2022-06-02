@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Nelphim';
-  src: url('/fonts/Nelphim-Regular.woff2') format('woff2'), url('../fonts/Nelphim-Regular.woff') format('woff');
+  src: url('/fonts/Nelphim-Regular.woff2') format('woff2'), url('/fonts/Nelphim-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 @font-face {
   font-family: 'MiSans';
   src: url('/fonts/MiSans-Semibold.woff2') format('woff2'),
-      url('../fonts/MiSans-Semibold.woff') format('woff');
+      url('/fonts/MiSans-Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -24,8 +24,7 @@
 
 @font-face {
   font-family: 'MiSans Normal';
-  src: url('/fonts/MiSans-Normal.woff2') format('woff2'),
-      url('../fonts/MiSans-Normal.woff') format('woff');
+  src: url('/fonts/MiSans-Normal.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -137,7 +136,7 @@ h1 {
 }
 h4{
   mix-blend-mode: overlay;
-  font-size: calc(80px);
+  font-size: 50px;
   background-color: transparent;
   filter: invert(100%);
   color: darkblue;
@@ -196,7 +195,7 @@ section>div {
 .section:nth-child(4) {
   background-color: #fdf4e5;
   background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
-  width: 50vw;
+  max-width: 40vw;
 }
 
 
@@ -478,7 +477,7 @@ margin:auto auto;
   text-align: center;
   color: #9e957d;
   font-family: 'MiSans';
-  font-size: 18px;
+  font-size: 13px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   cursor: pointer;
@@ -571,6 +570,7 @@ margin:auto auto;
   opacity: .8;
   top:0px;
   left:0;
+}
 /* REDCATED
  .card-container {
   max-width: 100%;
@@ -715,6 +715,10 @@ margin:auto auto;
     background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
     width: 105vw;
   }
+   .btn2 {
+    width: 100px;
+    height: 46px;
+  }
 }
 
 /* 
@@ -745,10 +749,12 @@ margin:auto auto;
   }
 
   .section:nth-child(4) {
-    background-color: #fdf4e5;
-    background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
-    width: 100vw;
+    width: 95vw!important;
   }
 
-
+  .btn2 {
+    width: 100px;
+    height: 46px;
+  }
+  
 }
