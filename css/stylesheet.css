@@ -13,6 +13,24 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'MiSans';
+  src: url('/fonts/MiSans-Semibold.woff2') format('woff2'),
+      url('/fonts/MiSans-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MiSans Normal';
+  src: url('/fonts/MiSans-Normal.woff2') format('woff2'),
+      url('/fonts/MiSans-Normal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 html::before {
   content: '';
@@ -117,16 +135,28 @@ h1 {
   opacity: .8;
   perspective: 500px;
 }
-
-h1, p {
+h4{
+  mix-blend-mode: overlay;
+  font-size: calc(80px);
+  background-color: transparent;
+  filter: invert(100%);
+  color: darkblue;
+  opacity: .8;
+  perspective: 500px;
+}
+h1, p, .logo {
   font-family: 'Nelphim';
   position: relative;
 }
 
+h4 {
+  font-size: 44px;
+ 
+}
 
 .main {
   display: block;
-  padding-top: 10%;
+  padding-top: 13%;
   padding-bottom: 3.2%;
 }
 
@@ -166,18 +196,20 @@ section>div {
 .section:nth-child(4) {
   background-color: #fdf4e5;
   background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
-  width: 35vw;
+  width: 50vw;
 }
 
 
 .section:nth-child(5) {
   background-color: lightgrey;
+  width: 100vw;
+}
 
+.section-inner {
+  width: 80%;
+  margin: 0 auto;
 }
-.section-inner{
-  width:80%;
-  margin:0 auto;
-}
+
 .sections {
   min-width: 100vw;
   height: 100vh;
@@ -187,69 +219,21 @@ section>div {
   width: 100%;
 }
 
-.card-container {
-  max-width: 100%;
-}
 
-.card-section {
-  min-height: 100vh;
-}
-
-.card-section>h2 {
-  padding-top: 10%;
-  padding-bottom: 3.2%;
-  font-size: 2.6em;
-}
-
-.card-container, .projects-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.card {
-  display: flex;
-  width: 50%;
-  height: 585px;
-  border-radius: 18px;
-  /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.12);*/
-  text-align: center;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  border: double 1em transparent;
-  border-width: 7px;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(to bottom, peachpuff 5%, #c7d3df);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  padding-bottom: 3%;
-}
-
-.card-text {
-  grid-area: text;
-  margin: 25px;
-  transform: translateZ(30px);
+.contact {
   text-align: left;
-}
+margin:auto auto;
 
-.card-text .date {
-  color: rgb(255, 7, 110);
-  font-size: 13px;
-}
 
-.card-text p {
-  color: grey;
-  font-size: 15px;
-  font-weight: 300;
 }
-
-.card-text h2 {
-  margin-top: 0px;
-  font-size: 28px;
+.contact-inner{
+  padding: 0 8%;
 }
-
-.js-tilt-glare {
-  border-radius: 18px;
+.lwd {
+  font-size: 20px;
+  margin: 10% 0% 10%;
+  line-height:1.4;
+  font-family: 'MiSans Normal';
 }
 
 .projects-section {
@@ -302,7 +286,7 @@ section>div {
 .intro {
   font-size: 3vw;
   color: #3b444b;
-  margin-top: 20px;
+  padding: 50px 0 20px 0;
   line-height: 1.25;
 }
 
@@ -382,7 +366,24 @@ section>div {
 .headline--float .char:nth-child(2n) {
   --name: float-alt;
 }
+.headline2 {
+  align-items: center;
+  background-color: var(--color);
+  display: flex;
 
+  font-weight: 700;
+  perspective: 1000px;
+  scroll-snap-align: start;
+  letter-spacing: 4px;
+  word-spacing: 30px;
+  /*  font-size: calc(1rem + 15vmin);
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  scroll-snap-align: start;
+  width: 100vw;*/
+}
 @-webkit-keyframes float {
   from {
     transform: translate(2%, -10%) rotate(-1deg);
@@ -432,10 +433,11 @@ section>div {
   margin: 16px;
   overflow: hidden;
   background: transparent;
-  /*border: 2px solid white;*/
+  border: 2px solid white;
+  border-radius: 30px;
   text-align: center;
   color: white;
-  font-family: Roboto, sans-serif;
+  font-family: 'MiSans';
   font-size: 18px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -444,9 +446,11 @@ section>div {
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translate3d(0, 0, 0);
 }
+
 .btn:focus {
   outline: none;
 }
+
 .btn:before {
   content: "";
   padding: 100%;
@@ -461,7 +465,50 @@ section>div {
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translate3d(0, 0, 0) scale(0);
 }
-.container{ background: url("../assets/cloud-bg.png") no-repeat;}
+
+.btn2 {
+  width: 280px;
+  height: 56px;
+  display: inline-block;
+  position: relative;
+  top: 20%;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 30px;
+  text-align: center;
+  color: #9e957d;
+  font-family: 'MiSans';
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.btn2:before {
+  content: "";
+  padding: 100%;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  background: url("https://img.pixers.pics/pho_wat(s3:700/FO/53/40/37/59/700_FO53403759_8fea9c6e9c24b27c89f55711107c76ea.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/posters-abstract-vector-texture-gold-silk.jpg.jpg") no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: 5%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0) scale(0);
+}
+
+.container {
+  background: transparent no-repeat;
+}
+
+.btn2:hover {
+  color: #79715e;
+}
 
 .btn span {
   position: absolute;
@@ -471,23 +518,125 @@ section>div {
   transform: translateY(-50%);
   z-index: 9;
 }
+
+.btn2 span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9;
+
+}
+
 .btn#btn-1:before {
   transition: all 0.3s ease;
 }
+
 .btn#btn-1:hover:before {
   -webkit-filter: blur(6px);
   filter: blur(6px);
 }
+
 .btn#btn-2:before {
   transition: all 0.3s ease;
   -webkit-filter: blur(6px);
   filter: blur(6px);
 }
+
 .btn#btn-2:hover:before {
   -webkit-filter: blur(0);
   filter: blur(0);
+
 }
 
+.btn2#btn-2:before {
+  transition: all 0.3s ease;
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  color: #3b444b;
+}
+
+.btn2#btn-2:hover:before {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  color: #3b444b;
+}
+#logo{
+  position:absolute;
+  width:15%;
+  mix-blend-mode: color-dodge;
+  background-color: transparent;
+  color: purple;
+  opacity: .8;
+  top:0px;
+  left:0;
+/* REDCATED
+ .card-container {
+  max-width: 100%;
+}
+
+.card-section {
+  min-height: 100vh;
+}
+
+.card-section>h2 {
+  padding-top: 10%;
+  padding-bottom: 3.2%;
+  font-size: 2.6em;
+}
+
+.card-container, .projects-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card {
+  display: flex;
+  width: 50%;
+  height: 585px;
+  border-radius: 18px;
+  /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  border: double 1em transparent;
+  border-width: 7px;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(to bottom, peachpuff 5%, #c7d3df);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding-bottom: 3%;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+  transform: translateZ(30px);
+  text-align: left;
+}
+
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size: 13px;
+}
+
+.card-text p {
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.js-tilt-glare {
+  border-radius: 18px;
+}
+ */
 @media (min-width: 1281px) {
   .main-inner {
     max-width: 75%;
@@ -542,6 +691,11 @@ section>div {
   .main-inner {
     max-width: 85%;
   }
+  .section:nth-child(4) {
+    background-color: #fdf4e5;
+    background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
+    width: 85vw;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 567px) {
@@ -555,6 +709,11 @@ section>div {
 
   p {
     font-size: 27px;
+  }
+  .section:nth-child(4) {
+    background-color: #fdf4e5;
+    background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
+    width: 105vw;
   }
 }
 
@@ -586,10 +745,10 @@ section>div {
   }
 
   .section:nth-child(4) {
-    background-color: lightyellow;
-    width: 75vw;
+    background-color: #fdf4e5;
+    background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
+    width: 95vw;
   }
-  
-  
 
-}
+
+}}
