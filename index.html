@@ -11,9 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <script src="vanilla-tilt.min.js"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js">
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <script src=" https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable-latest-beta.js">
 
@@ -26,19 +25,23 @@
   <div class="main-wrapper" data-js="main-wrapper">
     <div class="sections" data-js="sections-wrapper">
       <section class="section" data-js="section">
+       
+          
+       
         <div class="image"></div>
         <div class="main">
           <h1 data-splitting class="headline headline--float">Hi, I'm Nia.</h1>
           <p class="intro">I love cats and drawing.
            </p>
-
+           <div id="logo"><img src="./assets/nm-logo.png" alt="niamario logo"></div>
            
             <div id="container">
-              <div class="btn" id="btn-1"><span>Blur on hover</span></div>
+              <div class="btn" id="btn-2"><span>Blur on hover</span></div></div>
+              </div>
           </section>
-
+        
  
-    <section class="section" data-js="section">
+    <section class="section x mandatory-scroll-snapping" dir="ltr" data-js="section">
       <div class="section-inner">
           <h2>BLA</h2>
          
@@ -50,11 +53,23 @@
       <h1 class="section__title">5</h1></section>
       
     <section class="section card-section" data-js="section">
-     
+      <div class="contact">
+        <div class="contact-inner">
+        <h4 data-splitting class="headline2 headline--float">Let's Work</h4>
+        <p class="lwd">Let's create a site for your small business that can compete with the big guys.
+         </p>
+         
+          <div id="container">
+            <div class="btn2" id="btn-2"><span>Blur on hover</span></div>
+          </div>
+            </div>
+            </div>
+        </section>
+      </div>
+      </div>
         
-     </section>
-  </div>
-  </div>
+     
+
 
 
 
@@ -157,7 +172,7 @@ var sectionWrapper = $.js('sections-wrapper');
 var vW = $(window).width();
 
 mainWrapper.mousewheel(function(event, delta) {
-        this.scrollLeft -= (delta * 75);
+        this.scrollLeft -= (delta * 100);
 
         event.preventDefault();
     });
