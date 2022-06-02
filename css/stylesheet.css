@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Nelphim';
-  src: url('./fonts/NelphimItalic-Italic.woff2') format('woff2'), url('./fonts/NelphimItalic-Italic.woff') format('woff');
+  src: url('/fonts/NelphimItalic-Italic.woff2') format('woff2'), url('/fonts/NelphimItalic-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Nelphim';
-  src: url('./fonts/Nelphim-Regular.woff2') format('woff2'), url('./fonts/Nelphim-Regular.woff') format('woff');
+  src: url('/fonts/Nelphim-Regular.woff2') format('woff2'), url('/fonts/Nelphim-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -562,7 +562,7 @@ margin:auto auto;
   color: #3b444b;
 }
 #logo{
-  position:absolute;
+  position:fixed;
   width:15%;
   mix-blend-mode: color-dodge;
   background-color: transparent;
