@@ -6,71 +6,80 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Nia Mario</title>
   <link href="./css/stylesheet.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <script src="vanilla-tilt.min.js"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script>
+  <script
+    src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <script src=" https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable-latest-beta.js">
 
-    </script>
+  </script>
+  <link rel="icon" type="image/x-icon" sizes="96x96" href="./assets/nm-logoico.ico">
 </head>
 
 <body>
 
-  
+
   <div class="main-wrapper" data-js="main-wrapper">
     <div class="sections" data-js="sections-wrapper">
       <section class="section" data-js="section">
-       
-          
-       
+
+
+
         <div class="image"></div>
+        <header>
+          <div class="inner-wrapper">
+          <div id="logo"><img src="/assets/nm-logo.png" alt="niamario logo">
+          </div>
+        </div>
+        </header>
         <div class="main">
           <h1 data-splitting class="headline headline--float">Hi, I'm Nia.</h1>
           <p class="intro">I love cats and drawing.
-           </p>
-           <div id="logo"><img src="../assets/nm-logo.png" alt="niamario logo"></div>
-           
-            <div id="container">
-              <div class="btn" id="btn-2"><span>Blur on hover</span></div></div>
-             
-              </div>
-              <a class="scroll" href="#panel-2">Go to page 2</a>
-          </section>
-        
- 
-    <section class="section x mandatory-scroll-snapping" dir="ltr" data-js="section">
-      <div class="section-inner">
-          <h2>BLA</h2>
-         
-         
-        </div>
-     </section>
+          </p>
 
-    <section class="section" data-js="section">
-      <h1 class="section__title">5</h1></section>
-      
-    <section class="section card-section" data-js="section">
-      <div class="contact">
-        <div class="contact-inner">
-        <h4 data-splitting class="headline2 headline--float">something</h4>
-        <p class="lwd">come back to this
-         </p>
-         
           <div id="container">
-            <div class="btn2" id="btn-2"><span>Blur on hover</span></div>
+            <div class="btn" id="btn-2"><span>Blur on hover</span></div>
           </div>
+
+        </div>
+        <a class="scroll" href="#panel-2">Go to page 2</a>
+      </section>
+
+
+      <section class="section x mandatory-scroll-snapping" dir="ltr" data-js="section">
+        <div class="section-inner">
+          <h2>BLA</h2>
+
+
+        </div>
+      </section>
+
+      <section class="section" data-js="section">
+        <h1 class="section__title">5</h1>
+      </section>
+
+      <section class="section card-section" data-js="section">
+        <div class="contact">
+          <div class="contact-inner">
+            <h4 data-splitting class="headline2 headline--float">something </h4> <span class="inline">💪🏼</span>
+            <p class="lwd">come back to this
+            </p>
+
+            <div id="container">
+              <div class="btn2" id="btn-2"><span>Blur on hover</span></div>
             </div>
-            </div>
-        </section>
-      </div>
-      </div>
-        
-     
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
 
 
 
@@ -84,132 +93,132 @@
 
 
   <script>
-  $(document).ready(function () {
+    $(document).ready(function () {
       $('.image').ripples('show');
     });
-    </script>
+  </script>
 
-<script>
-  (function($) {
+  <script>
+    (function ($) {
 
-var types = ['DOMMouseScroll', 'mousewheel'];
+      var types = ['DOMMouseScroll', 'mousewheel'];
 
-if ($.event.fixHooks) {
-    for ( var i=types.length; i; ) {
-        $.event.fixHooks[ types[--i] ] = $.event.mouseHooks;
-    }
-}
+      if ($.event.fixHooks) {
+        for (var i = types.length; i;) {
+          $.event.fixHooks[types[--i]] = $.event.mouseHooks;
+        }
+      }
 
-$.event.special.mousewheel = {
-    setup: function() {
-        if ( this.addEventListener ) {
-            for ( var i=types.length; i; ) {
-                this.addEventListener( types[--i], handler, false );
+      $.event.special.mousewheel = {
+        setup: function () {
+          if (this.addEventListener) {
+            for (var i = types.length; i;) {
+              this.addEventListener(types[--i], handler, false);
             }
-        } else {
+          } else {
             this.onmousewheel = handler;
-        }
-    },
+          }
+        },
 
-    teardown: function() {
-        if ( this.removeEventListener ) {
-            for ( var i=types.length; i; ) {
-                this.removeEventListener( types[--i], handler, false );
+        teardown: function () {
+          if (this.removeEventListener) {
+            for (var i = types.length; i;) {
+              this.removeEventListener(types[--i], handler, false);
             }
-        } else {
+          } else {
             this.onmousewheel = null;
+          }
         }
-    }
-};
+      };
 
-$.fn.extend({
-    mousewheel: function(fn) {
-        return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
-    },
+      $.fn.extend({
+        mousewheel: function (fn) {
+          return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
+        },
 
-    unmousewheel: function(fn) {
-        return this.unbind("mousewheel", fn);
-    }
-});
+        unmousewheel: function (fn) {
+          return this.unbind("mousewheel", fn);
+        }
+      });
 
 
-function handler(event) {
-    var orgEvent = event || window.event, args = [].slice.call( arguments, 1 ), delta = 0, returnValue = true, deltaX = 0, deltaY = 0;
-    event = $.event.fix(orgEvent);
-    event.type = "mousewheel";
+      function handler(event) {
+        var orgEvent = event || window.event, args = [].slice.call(arguments, 1), delta = 0, returnValue = true, deltaX = 0, deltaY = 0;
+        event = $.event.fix(orgEvent);
+        event.type = "mousewheel";
 
-    // Old school scrollwheel delta
-    if ( orgEvent.wheelDelta ) { delta = orgEvent.wheelDelta/120; }
-    if ( orgEvent.detail     ) { delta = -orgEvent.detail/3; }
+        // Old school scrollwheel delta
+        if (orgEvent.wheelDelta) { delta = orgEvent.wheelDelta / 120; }
+        if (orgEvent.detail) { delta = -orgEvent.detail / 3; }
 
-    // New school multidimensional scroll (touchpads) deltas
-    deltaY = delta;
+        // New school multidimensional scroll (touchpads) deltas
+        deltaY = delta;
 
-    // Gecko
-    if ( orgEvent.axis !== undefined && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
-        deltaY = 0;
-        deltaX = -1*delta;
-    }
+        // Gecko
+        if (orgEvent.axis !== undefined && orgEvent.axis === orgEvent.HORIZONTAL_AXIS) {
+          deltaY = 0;
+          deltaX = -1 * delta;
+        }
 
-    // Webkit
-    if ( orgEvent.wheelDeltaY !== undefined ) { deltaY = orgEvent.wheelDeltaY/120; }
-    if ( orgEvent.wheelDeltaX !== undefined ) { deltaX = -1*orgEvent.wheelDeltaX/120; }
+        // Webkit
+        if (orgEvent.wheelDeltaY !== undefined) { deltaY = orgEvent.wheelDeltaY / 120; }
+        if (orgEvent.wheelDeltaX !== undefined) { deltaX = -1 * orgEvent.wheelDeltaX / 120; }
 
-    // Add event and delta to the front of the arguments
-    args.unshift(event, delta, deltaX, deltaY);
+        // Add event and delta to the front of the arguments
+        args.unshift(event, delta, deltaX, deltaY);
 
-    return ($.event.dispatch || $.event.handle).apply(this, args);
-}
+        return ($.event.dispatch || $.event.handle).apply(this, args);
+      }
 
-})(jQuery);
+    })(jQuery);
 
-// EXTEND jQuery
-$.js = function (el) {
-return $('[data-js=' + el + ']')
-};
+    // EXTEND jQuery
+    $.js = function (el) {
+      return $('[data-js=' + el + ']')
+    };
 
-var mainWrapper = $.js('main-wrapper');
-var sectionWrapper = $.js('sections-wrapper');
+    var mainWrapper = $.js('main-wrapper');
+    var sectionWrapper = $.js('sections-wrapper');
 
-var vW = $(window).width();
+    var vW = $(window).width();
 
-mainWrapper.mousewheel(function(event, delta) {
-        this.scrollLeft -= (delta * 105);
+    mainWrapper.mousewheel(function (event, delta) {
+      this.scrollLeft -= (delta * 105);
 
-        event.preventDefault();
+      event.preventDefault();
     });
 
-Draggable.create(mainWrapper, {
-type: 'scrollLeft',
-throwProps: true,
-cursor: 'ew-resize'
-});
+    Draggable.create(mainWrapper, {
+      type: 'scrollLeft',
+      throwProps: true,
+      cursor: 'ew-resize'
+    });
 
-function setWidth() {
-var section = $.js('section');
-var totalWidth = 0;
+    function setWidth() {
+      var section = $.js('section');
+      var totalWidth = 0;
 
-section.each(function() {
-totalWidth += parseInt($(this).width(), 10);    
-});
+      section.each(function () {
+        totalWidth += parseInt($(this).width(), 10);
+      });
 
-sectionWrapper.css('width', ''+ (totalWidth + 1) +'px');
-}
+      sectionWrapper.css('width', '' + (totalWidth + 1) + 'px');
+    }
 
-setWidth();
+    setWidth();
 
-$(window).on('resize', function() {
-setWidth();
+    $(window).on('resize', function () {
+      setWidth();
 
-});
-
-
-</script>
+    });
 
 
+  </script>
 
 
-<script>
+
+
+  <script>
     VanillaTilt.init(document.querySelectorAll(".card"), {
       glare: true,
       reverse: true,
