@@ -13,10 +13,11 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'MiSans';
   src: url('../fonts/MiSans-Semibold.woff2') format('woff2'),
-      url('../fonts/MiSans-Semibold.woff') format('woff');
+    url('../fonts/MiSans-Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -24,7 +25,8 @@
 
 @font-face {
   font-family: 'MiSans Normal';
-  src: url('../fonts/MiSans-Normal.woff2') format('woff2');
+  src: url('/fonts/MiSans-Normal.woff2') format('woff2'),
+    url('/fonts/MiSans-Normal.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -107,6 +109,7 @@ img {
 
 .section {
   cursor: url(../assets/dot.png), auto;
+
 }
 
 * {
@@ -134,7 +137,8 @@ h1 {
   opacity: .8;
   perspective: 500px;
 }
-h4{
+
+h4 {
   mix-blend-mode: overlay;
   font-size: 50px;
   background-color: transparent;
@@ -143,20 +147,23 @@ h4{
   opacity: .8;
   perspective: 500px;
 }
-h1, p, .contact {
+
+h1, p, .contact, a {
   font-family: 'Nelphim';
   position: relative;
 }
 
 h4 {
   font-size: 44px;
- 
+
 }
 
 .main {
   display: block;
   padding-top: 13%;
   padding-bottom: 3.2%;
+  position: relative;
+
 }
 
 section>div {
@@ -167,6 +174,7 @@ section>div {
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  position: relative;
 }
 
 .section {
@@ -177,6 +185,7 @@ section>div {
   display: flex;
   align-items: center;
   flex-direction: column;
+  scroll-snap-align: start;
 }
 
 .section:first-child {
@@ -196,12 +205,13 @@ section>div {
   background-color: #fdf4e5;
   background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
   width: 50vw;
+  justify-content: center;
 }
 
 
 .section:nth-child(5) {
   background-color: lightgrey;
- 
+
 }
 
 .section-inner {
@@ -221,17 +231,19 @@ section>div {
 
 .contact {
   text-align: left;
-margin:auto auto;
+  margin: auto auto;
 
 
 }
-.contact-inner{
+
+.contact-inner {
   padding: 0 0%;
 }
+
 .lwd {
   font-size: 20px;
   margin: 10% 0% 10%;
-  line-height:1.4;
+  line-height: 1.4;
   font-family: 'MiSans Normal';
 }
 
@@ -365,6 +377,7 @@ margin:auto auto;
 .headline--float .char:nth-child(2n) {
   --name: float-alt;
 }
+
 .headline2 {
   align-items: center;
   background-color: var(--color);
@@ -383,6 +396,7 @@ margin:auto auto;
   scroll-snap-align: start;
   width: 100vw;*/
 }
+
 @-webkit-keyframes float {
   from {
     transform: translate(2%, -10%) rotate(-1deg);
@@ -436,7 +450,7 @@ margin:auto auto;
   border-radius: 30px;
   text-align: center;
   color: white;
-  font-family: 'MiSans';
+  font-family: 'MiSans Normal';
   font-size: 18px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -476,7 +490,7 @@ margin:auto auto;
   border-radius: 30px;
   text-align: center;
   color: #9e957d;
-  font-family: 'MiSans';
+  font-family: 'MiSans Normal';
   font-size: 13px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -543,10 +557,20 @@ margin:auto auto;
   filter: blur(6px);
 }
 
+.inline {
+  display: inline;
+  position: relative;
+  left: 260px;
+  top: -19px;
+}
+
+a:hover {
+  cursor: url('green-check-cursor.cur'), auto;
+}
+
 .btn#btn-2:hover:before {
   -webkit-filter: blur(0);
   filter: blur(0);
-
 }
 
 .btn2#btn-2:before {
@@ -561,16 +585,75 @@ margin:auto auto;
   filter: blur(0);
   color: #3b444b;
 }
-#logo{
-  position:fixed;
-  width:15%;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  pointer-events: none;
   mix-blend-mode: color-dodge;
   background-color: transparent;
   color: purple;
   opacity: .8;
-  top:0px;
-  left:0;
 }
+
+header .inner-wrapper {
+  z-index: 2;
+  padding: 30px 40px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -ms-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+header .inner-wrapper:before {
+  content: "";
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  -webkit-transform: translateY(-70px);
+  -moz-transform: translateY(-70px);
+  -ms-transform: translateY(-70px);
+  -o-transform: translateY(-70px);
+  transform: translateY(-70px);
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+ header .inner-wrapper:after {
+    clear: both;
+}
+header .inner-wrapper #logo {
+  float: left;
+  display: block;
+ 
+  z-index: 3;
+}
+ header .inner-wrapper:after {
+    clear: both;
+}
+#logo {
+  position: fixed;
+  width: 15%;
+
+  top: 0px;
+  left: 0;
+}
+
 /* REDCATED
  .card-container {
   max-width: 100%;
@@ -637,6 +720,77 @@ margin:auto auto;
   border-radius: 18px;
 }
  */
+.dm-width {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.iphone-mockup {
+  position: relative;
+  z-index: 5;
+}
+
+.dm-device {
+   position: relative;
+   width: 100%;
+   padding-bottom:203.477897%;
+   margin-bottom: 20px;
+}
+
+.device {
+ position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   -webkit-background-size: 100% 100%;
+   
+   background-repeat: no-repeat;
+         background-image: url(https://res.cloudinary.com/di5yipnns/image/upload/v1482236588/apple-iphone_aivldo.png);
+ background-size: cover;
+   background-position: center center;
+}
+
+.screen {
+  overflow: hidden;
+   position: absolute;
+   top: 18.1%;
+   bottom: 20.6%;
+   left: 12.49%;
+   right: 17.4%;
+   background-color: #E91E63;
+}
+
+.slider {
+ height: 100%;
+}
+.slider div {
+ height: 100%;
+}
+
+.slider__item {
+   font-size: 100px;
+   color: rgba(255,255,255,0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.slider__item--1 {
+  background-color: #E91E63;
+}
+.slider__item--2 {
+  background-color: #2196F3;
+}
+.slider__item--3 {
+  background-color: #4CAF50;
+}
+
+.slider__item--4 {
+ background-color: #FFC107;
+}
 @media (min-width: 1281px) {
   .main-inner {
     max-width: 75%;
@@ -691,6 +845,7 @@ margin:auto auto;
   .main-inner {
     max-width: 85%;
   }
+
   .section:nth-child(4) {
     background-color: #fdf4e5;
     background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
@@ -710,12 +865,14 @@ margin:auto auto;
   p {
     font-size: 27px;
   }
+
   .section:nth-child(4) {
     background-color: #fdf4e5;
     background: linear-gradient(to top left, #c7d3df 50%, #fdf4e5 109%);
     width: 155vw;
   }
-   .btn2 {
+
+  .btn2 {
     width: 100px;
     height: 46px;
   }
@@ -749,12 +906,12 @@ margin:auto auto;
   }
 
   .section:nth-child(4) {
-    width: 85vw!important;
+    width: 85vw !important;
   }
 
   .btn2 {
-    width: 100px;
+    width: 170px;
     height: 46px;
   }
-  
+
 }
