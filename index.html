@@ -8,17 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nia Mario</title>
   <link href="./css/stylesheet.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <script src="vanilla-tilt.min.js"></script>
-  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <script
     src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-  <script src=" https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable-latest-beta.js">
-
-  </script>
+  <script src=" https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable-latest-beta.js"></script>
   <link rel="icon" type="image/x-icon" sizes="96x96" href="./assets/nm-logoico.ico">
+  
 </head>
 
 <body>
@@ -33,9 +31,9 @@
         <div class="image"></div>
         <header>
           <div class="inner-wrapper">
-          <div id="logo"><img src="/assets/nm-logo.png" alt="niamario logo">
+            <div id="logo"><img src="/assets/nm-logo.png" alt="niamario logo">
+            </div>
           </div>
-        </div>
         </header>
         <div class="main">
           <h1 data-splitting class="headline headline--float">Hi, I'm Nia.</h1>
@@ -60,7 +58,28 @@
       </section>
 
       <section class="section" data-js="section">
-        <h1 class="section__title">5</h1>
+        <div class="dm-width">
+          <div class="dm-device">
+            <div class="device">
+              <div class="screen">
+                <div class="slider">
+                  <div class="slider__item slider__item--1">
+                    1
+                  </div>
+                  <div class="slider__item slider__item--2">
+                    2
+                  </div>
+                  <div class="slider__item slider__item--3">
+                    3
+                  </div>
+                  <div class="slider__item slider__item--4">
+                    4
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="section card-section" data-js="section">
@@ -215,7 +234,17 @@
 
   </script>
 
+  <script>
 
+$('.slider').owlCarousel({
+            items: 1,
+            singleItem:true,
+            nav: true,
+            dots: false,
+            loop: true,
+            autoPlay: 3000
+        });
+  </script>
 
 
   <script>
